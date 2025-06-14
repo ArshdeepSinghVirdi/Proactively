@@ -9,16 +9,24 @@ import Column2_2 from '../assets/column2_2.png';
 import Column2_3 from '../assets/column2_3.png';
 import Column2_4 from '../assets/column2_4.png';
 import Column2_5 from '../assets/column2_5.png';
-import Ellipse from '../assets/Ellipse 1.png'
 import VectorImage from '../assets/line.png'; 
 
 const HeroSection = ({ children }) => {
+  // All images for mobile horizontal scroll (duplicated for seamless loop)
+  const allImages = [
+    Column1_1, Column1_2, Column1_3, Column1_4,
+    Column2_1, Column2_2, Column2_3, Column2_4, Column2_5,
+    // Duplicate for seamless loop
+    Column1_1, Column1_2, Column1_3, Column1_4,
+    Column2_1, Column2_2, Column2_3, Column2_4, Column2_5
+  ];
+
   return (
     <section className="hero-section">
-       <div className="blue-gradient-top-right"></div>
+      <div className="blue-gradient-top-right"></div>
       <div className="hero-container">
         <div className="hero-content">
-          {/* Column 1 - Images moving down */}
+          {/* Desktop: Column 1 - Images moving down */}
           <div className="hero-images">
             <div className="images-animated-col1">
               <img src={Column1_1} alt="Lifestyle 1" className="hero-image-col1" />
@@ -28,7 +36,7 @@ const HeroSection = ({ children }) => {
             </div>
           </div>
 
-          {/* Column 2 - Images moving up with yellow background */}
+          {/* Desktop: Column 2 - Images moving up with yellow background */}
           <div className="yellow-gradient-bg"></div>
           <div className="hero-images-col2-container">
             <div className="hero-images-col2">
@@ -42,7 +50,7 @@ const HeroSection = ({ children }) => {
             </div>
           </div>
 
-          {/* Text Content */}
+          {/* Desktop: Text Content */}
           <div className="hero-text-block">
             <div className="hero-title-block">
               <div className="hero-title-line1">Book an appointment with</div>
@@ -53,14 +61,24 @@ const HeroSection = ({ children }) => {
             </div>
           </div>
         </div>
-        
-        {/* Centered Search Bar */}
+        {/* Place a single centered vector image (line.png) behind the search bar */}
+        <div className="vector-image-container vector-image-mobile-behind-search">
+          <img src={VectorImage} alt="Decorative vector" className="vector-image" />
+        </div>
+        {/* Search Bar */}
         {children && <div className="hero-search-bar-wrapper">{children}</div>}
-      </div>
-      
-      {/* Vector Image positioned at the end of image columns */}
-      <div className="vector-image-container">
-        <img src={VectorImage} alt="Decorative vector" className="vector-image" />
+        {/* Mobile: Single row of all images (hidden on desktop) */}
+        <div className="mobile-images-container">
+          <div className="mobile-images-scroll">
+            {allImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Lifestyle ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
