@@ -1,0 +1,177 @@
+/* Lifestyle Cards Styles */
+.lifestyle-cards-section {
+  padding: 5px 0;
+  background: none !important;
+  overflow: hidden; /* Prevent scroll overflow from animation */
+}
+
+.lifestyle-cards-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cards-slider {
+  display: flex;
+  gap: 40px;
+  animation: scrollCarousel 30s linear infinite;
+  width: max-content;
+}
+
+.cards-slider:hover {
+  animation-play-state: paused;
+}
+
+.slide-card {
+  min-width: 360px;
+  max-width: 360px;
+  flex: 0 0 auto;
+  position: relative;
+  background: #fff;
+  border-radius: 32px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  margin-right: -15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06); /* <--- add this */
+}
+
+.slide-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-container {
+  position: relative;
+  height: 220px;
+  border-radius: 32px;
+  overflow: hidden;
+  margin-top: 32px;
+}
+
+.card-image {
+  border-radius: 32px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Icon overlay style */
+.card-icon-only {
+  position: absolute;
+  top: 150px;
+  left: 16px;
+  width: 105px;
+  height: 90px;
+  z-index: 3;
+}
+
+.metric-icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Card Text Content */
+.card-content {
+  padding: 24px 24px 32px 24px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.card-description {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Auto-scrolling animation */
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .cards-slider {
+    gap: 24px;
+    animation: scrollCarousel 40s linear infinite;
+  }
+
+  .slide-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lifestyle-cards-section {
+    padding: 60px 0;
+  }
+
+  .lifestyle-cards-container {
+    padding: 0 16px;
+  }
+
+  .cards-slider {
+    gap: 16px;
+    animation: scrollCarousel 45s linear infinite;
+  }
+
+  .slide-card {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+
+  .card-image-container {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 24px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .card-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image-container {
+    height: 120px;
+  }
+
+  .card-content {
+    padding: 16px 12px 20px 12px;
+  }
+
+  .card-title {
+    font-size: 17px;
+  }
+
+  .card-description {
+    font-size: 13px;
+  }
+
+  .card-icon-only {
+    width: 36px;
+    height: 36px;
+    top: 12px;
+    left: 12px;
+  }
+}
