@@ -12,11 +12,9 @@ import Column2_5 from '../assets/column2_5.png';
 import VectorImage from '../assets/line.png'; 
 
 const HeroSection = ({ children }) => {
-  // All images for mobile horizontal scroll (duplicated for seamless loop)
   const allImages = [
     Column1_1, Column1_2, Column1_3, Column1_4,
     Column2_1, Column2_2, Column2_3, Column2_4, Column2_5,
-    // Duplicate for seamless loop
     Column1_1, Column1_2, Column1_3, Column1_4,
     Column2_1, Column2_2, Column2_3, Column2_4, Column2_5
   ];
@@ -61,13 +59,10 @@ const HeroSection = ({ children }) => {
             </div>
           </div>
         </div>
-        {/* Place a single centered vector image (line.png) behind the search bar */}
         <div className="vector-image-container vector-image-mobile-behind-search">
           <img src={VectorImage} alt="Decorative vector" className="vector-image" />
         </div>
-        {/* Search Bar */}
         {children && <div className="hero-search-bar-wrapper">{children}</div>}
-        {/* Mobile: Single row of all images (hidden on desktop) */}
         <div className="mobile-images-container">
           <div className="mobile-images-scroll">
             {allImages.map((image, index) => (

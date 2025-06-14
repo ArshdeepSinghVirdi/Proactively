@@ -1,4 +1,4 @@
-/* Lifestyle Cards Styles */
+
 .lifestyle-cards-section {
   padding: 60px 0;
   background: none !important;
@@ -57,7 +57,7 @@
   object-fit: cover;
 }
 
-/* Icon overlay style */
+
 .card-icon-only {
   position: absolute;
   top: 150px;
@@ -73,7 +73,7 @@
   object-fit: contain;
 }
 
-/* Card Text Content */
+
 .card-content {
   padding: 24px 24px 32px 24px;
 }
@@ -91,7 +91,7 @@
   line-height: 1.6;
 }
 
-/* Auto-scrolling animation */
+
 @keyframes scrollCarousel {
   0% {
     transform: translateX(0);
@@ -101,7 +101,7 @@
   }
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 1024px) {
   .cards-slider {
     gap: 24px;

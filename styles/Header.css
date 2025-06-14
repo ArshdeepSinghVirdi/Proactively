@@ -49,7 +49,7 @@
 .nav-desktop {
   display: flex;
   align-items: center;
-  gap: 0; /* gap not needed because we're using padding */
+  gap: 0; 
 }
 
 .nav-link {
@@ -64,12 +64,11 @@
   border-left: none;
 }
 
-/* Style login/signup dropdown */
 .login-dropdown-desktop {
   display: flex;
   align-items: center;
   padding: 0 16px;
-  border-left: 1px solid #ccc; /* only one clean line before login/signup */
+  border-left: 1px solid #ccc; 
 }
 
 .login-button {
@@ -176,7 +175,7 @@
 .mobile-menu {
   display: none;
   background-color: white;
-  min-height: 100vh; /* Ensures it spans entire screen */
+  min-height: 100vh; 
   padding-bottom: 20px;
   position: absolute;
   top: 64px;

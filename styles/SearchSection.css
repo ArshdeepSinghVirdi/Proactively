@@ -1,4 +1,4 @@
-/* Search Section Styles */
+
 .search-section {
   display: block;
   justify-content: unset;
@@ -107,7 +107,7 @@
   justify-content: center;
 }
 
-/* Mobile Responsive */
+
 @media (max-width: 768px) {
   .search-section {
     position: static;

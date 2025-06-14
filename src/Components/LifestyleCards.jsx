@@ -59,7 +59,7 @@ const cards = [
 ];
 
 const LifestyleCards = () => {
-  // Duplicate cards array to create a seamless infinite loop
+  // Duplicated cards array to create a seamless infinite loop
   const repeatedCards = [...cards, ...cards];
 
   return (

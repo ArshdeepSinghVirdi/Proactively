@@ -33,9 +33,7 @@ const HowItWorksSection = () => {
              <span className="normal-title"> The six pillars</span>
            </h2>
            <div className="left-gradient-circle" />
-           {/* Gradient background behind arrows */}
            <div className="arrows-gradient-bg"></div>
-            {/* Navigation Arrows - Desktop */}
             <div className="navigation-arrows">
             <div className="right-gradient-circle" />
             <button className="nav-arrow">
